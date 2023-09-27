@@ -1,0 +1,81 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'ngx-toastr/toastr';
+@import 'variables.scss';
+
+html, body { height: 100%; }
+
+.toast-position{
+    top: 50px;
+    bottom: 30px;
+    right: 10px;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    
+}
+
+*{
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 15px;
+}
+
+app-root{
+  width: 100%;
+  max-width: 952px;
+}
+
+.menu-spacer {
+  flex: 1 1 auto;
+}
+
+#toggle-menu{
+  display: none;
+}
+
+#menu-horizontal, #menu-only-logo{
+  display: block;
+  #logo-header{
+    margin-top: 40px;
+  }
+  a{
+    margin-top: -20px;
+    font-weight: $font-bold;
+    color: $cor-branco;
+    text-transform: uppercase;
+    span{
+      font-size: 12px;
+    }
+  }
+}
+
+#menu-only-logo{
+  display: none;
+}
+
+#logo-header{
+  z-index: 9999;
+  position: relative;
+}
+
+.mat-toolbar{
+  height: 112px;
+  background: $cor-verde !important;
+}
+
+@media only screen and (max-width: 700px) {
+  #toggle-menu{
+    display: block;
+  }
+  #menu-horizontal{
+    display: none;
+  }
+
+  #menu-only-logo{
+    display: block;
+  }
+}
+
+  
