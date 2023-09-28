@@ -1,0 +1,31 @@
+@import '/src/variables.scss';
+
+.section{
+    padding: 40px 110px;
+    background: $cor-branco;
+    h2{
+        font-size: 15px;
+        font-weight: $font-bold;
+        color: $cor-verde;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-weight: $font-medium;
+        text-align: center;
+    }
+    p{
+        color: $cor-cinza;
+        line-height: 1.5;
+        font-weight: $font-medium;
+        text-align: justify;
+    }
+    &.green{
+        background: $cor-verde;
+        h2{
+            color: $cor-dourado-claro;
+        }
+        p{
+            color: $cor-branco;
+        }
+    }
+
+}
