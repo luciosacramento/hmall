@@ -12,7 +12,6 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpConfigInterceptor } from './core/httpConfig.interceptor';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
-import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 import { HomeModule } from './modules/home/home.module';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -31,8 +30,6 @@ registerLocaleData(localePt);
     AppRoutingModule,
     ReactiveFormsModule,
     MatIconModule,
-    NgxMaskDirective,
-    NgxMaskPipe,
     BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,
@@ -54,8 +51,7 @@ registerLocaleData(localePt);
     },
     Utils,
     {provide: ErrorHandler, useClass: GlobalErrorHandler},
-    {provide: HTTP_INTERCEPTORS, useClass: HttpConfigInterceptor, multi: true },
-    provideNgxMask()
+    {provide: HTTP_INTERCEPTORS, useClass: HttpConfigInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })
