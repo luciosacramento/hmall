@@ -28,4 +28,57 @@
         }
     }
 
+    &.lojas{
+        padding: 40px 40px;
+    }
+
+}
+
+.cont-lojas{
+    display: flex;
+    width: 100%;
+    flex: 1;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cham-loja{
+    text-align: center;
+    width: 200px;
+    padding: 20px 10px;
+    border: 1px solid $cor-cinza-claro;
+    display: inline-block;
+    margin: 5px;
+    h5{
+        font-size: 12px;
+        margin-top: 20px;
+        span{
+            font-size: 12px;
+            color: $cor-dourado-escuro;
+        }
+    }
+    hr{
+        border: 1px solid $cor-cinza-claro;
+    }
+    .site,.tel{
+        font-size: 12px;
+        display: table;
+        margin: 10px auto 0 auto;
+        &:before{
+            content: '';
+            background: url('/assets/images/icon-site.png') no-repeat;
+            width: 20px;
+            height: 15px;
+            display: inline-block !important;
+            position: relative;
+            margin: -3px 4px;
+        }
+    }
+
+    .tel{
+        &:before{
+            background: url('/assets/images/icon-smartphone.png') no-repeat;
+        }
+    }
 }
