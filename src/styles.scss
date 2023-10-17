@@ -17,6 +17,15 @@ html, body { height: 100%; }
     
 }
 
+button {
+  background-image: linear-gradient(to top, #B8764D 0%, #DFA684 50%);
+  color: white;
+  padding: 6px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
 *{
   font-family: 'Montserrat', sans-serif !important;
   font-size: 15px;
@@ -82,4 +91,107 @@ mat-icon{
   }
 }
 
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  label, input, textarea {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    border: 0;
+    background: #D9D9D9;
+    padding: 5px;
+  }
+  textarea {
+    height: 71px;
+  }
+  .form-column {
+    flex: 1;
+    max-width: calc(50% - 10px);
+  }
+  button {
+    width: 100%;
+  }
+    
+}
+
+.link_instagram{
+  color: $cor-dourado-claro;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: $font-medium;
+  margin-top: 10px;
+  display: block;
+  &::before{
+    content: '';
+    background: url('/assets/images/icon-instagram.png') no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block !important;
+    position: relative;
+    margin: -8px 3px;
+  }
+}
+
+#contact-info {
+
+  >div {
+    flex: 1;
+    max-width: calc(50% - 10px);
+    color: $cor-dourado-claro;
+
+    .endereco{
+      padding-left: 44px;
+      display: block;
+      margin-top: 20px;
+    }
+
+    .horario{
+      padding-left: 44px;
+      display: block;
+      margin-top: 20px;
+    }
+
+    .endereco::before,.horario::before{
+      content: "";
+      background: url(/assets/images/icon-endereco.png) no-repeat;
+      width: 30px;
+      height: 40px;
+      display: block !important;
+      position: absolute;
+      margin: -2px -40px;
+    }
+
+    .horario::before{
+      background: url(/assets/images/icon-horario.png) no-repeat;
+    }
+      
+    }
+  }
+
+  #logo-footer {
+    margin: 60px auto;
+    display: block;
+}
+
+.cont_two_column {
+  @include basic-column();
+
+  .item {
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
   
+    @media screen and (max-width: 480px) {
+      width: 100%; // 1 coluna em telas ainda menores
+    }
+  }
+}
+    

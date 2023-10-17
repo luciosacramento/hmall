@@ -20,11 +20,16 @@
     }
     &.green{
         background: $cor-verde;
+        
         h2{
             color: $cor-dourado-claro;
         }
         p{
             color: $cor-branco;
+        }
+
+        h2:last-child{
+            margin-top: 80px !important;
         }
     }
 

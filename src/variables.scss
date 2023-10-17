@@ -6,3 +6,10 @@ $cor-dourado-escuro: #B8764D;
 $cor-branco: #fff;
 $cor-cinza: #767676;
 $cor-cinza-claro: #EAEAEA;
+
+@mixin basic-column() {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+  }
