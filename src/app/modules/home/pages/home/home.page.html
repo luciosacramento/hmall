@@ -1,10 +1,7 @@
 <img [src]="'./assets/images/img-header.jpg'" alt="" srcset="" id="logo-header" class="w-100">
-<section class="section green">
-    <h2>h-mall</h2>
-    <p>Perfeito para você!</p>
-    <p>Em uma das principais ruas da região, a Waldemar Falcão, o H Mall é o endereço certo para quem busca conforto e praticidade, enquanto aproveita um ambiente charmoso e sofisticado.</p>
-    <p>Com um mix de lojas e serviços que agregam praticidade, gastronomia e bem-estar, além da facilidade de acesso e mobilidade. No térreo você encontra moda, decoração, acessórios, restaurantes, óticas, assistência para celular e informática, além de centros de estética e salão de beleza. Já os dois pavimentos superiores abrigam a academia Smartfit e o último piso possui salas comerciais, entre escritórios de arquitetura, clínicas, acessórios, moda feminina e estética. </p>
-    <p>Tudo isso com conforto e segurança, são mais de 100 vagas de estacionamento coberto e manobrista.</p>
+<section class="section green" *ngIf="pageData">
+    <h2>{{pageData.titulo}}</h2>
+    <p [innerHTML]="pageData.conteudo"></p>
 </section>
 <section class="section lojas">
     <h2>Lojas e serviços</h2>

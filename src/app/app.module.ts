@@ -8,7 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import { Utils } from './core/utils';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { HttpConfigInterceptor } from './core/httpConfig.interceptor';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
@@ -41,7 +41,8 @@ registerLocaleData(localePt);
       positionClass: 'toast-position',
       closeButton: true
     }),
-    HomeModule
+    HomeModule,
+    HttpClientModule  
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'pt' },

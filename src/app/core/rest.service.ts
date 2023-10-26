@@ -5,7 +5,9 @@ import { environment } from "src/environment/environment";
 
 //Classe básica, com funcionalidade prontas para chamada de webservices
 //Demais classes services do projeto devem utilizar a mesma
-@Injectable()
+@Injectable({
+  providedIn: "root"
+})
 export class RestService {
 
   constructor(private httpClient: HttpClient) { }
