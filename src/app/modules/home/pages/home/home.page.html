@@ -7,83 +7,34 @@
     <h2>Lojas e serviços</h2>
     <div class="text-center">
         <mat-form-field appearance="outline" class="m-auto">
-        <mat-label for="search">Digite o que procura...</mat-label>
-            <input type="input" matInput  id="search"  />
+            <mat-label for="search">Digite o que procura...</mat-label>
+            <input type="input" matInput id="search" [(ngModel)]="searchTerm" (ngModelChange)="getLoja()"/>
             <mat-icon matPrefix>search</mat-icon>
-        </mat-form-field>
+          </mat-form-field>
     </div>
-    <div class="cont-lojas">
-        <div class="cham-loja">
-            <img [src]="'./assets/images/loja-logo.png'" alt=""/>
-            <h5>Smart Fit - <span class="text-amarelo">Academia</span></h5>
+    <div class="cont-lojas" *ngIf="lojaList">
+        <div class="cham-loja" *ngFor="let loja of lojaList">
+            <img [src]="loja.imagem_url" alt=""/>
+            <h5>{{loja.titulo}} - <span class="text-amarelo">{{loja.area_atuacao}}</span></h5>
             <hr>
-            <span class="site">www.smartfit.com.br</span>
-            <span class="tel">71 90993-4388</span>        
-        </div>
-        <div class="cham-loja">
-            <img [src]="'./assets/images/loja-logo.png'" alt=""/>
-            <h5>Smart Fit - <span class="text-amarelo">Academia</span></h5>
-            <hr>
-            <span class="site">www.smartfit.com.br</span>
-            <span class="tel">71 90993-4388</span>        
-        </div>
-        <div class="cham-loja">
-            <img [src]="'./assets/images/loja-logo.png'" alt=""/>
-            <h5>Smart Fit - <span class="text-amarelo">Academia</span></h5>
-            <hr>
-            <span class="site">www.smartfit.com.br</span>
-            <span class="tel">71 90993-4388</span>        
-        </div>
-        <div class="cham-loja">
-            <img [src]="'./assets/images/loja-logo.png'" alt=""/>
-            <h5>Smart Fit - <span class="text-amarelo">Academia</span></h5>
-            <hr>
-            <span class="site">www.smartfit.com.br</span>
-            <span class="tel">71 90993-4388</span>        
-        </div>
-        <div class="cham-loja">
-            <img [src]="'./assets/images/loja-logo.png'" alt=""/>
-            <h5>Smart Fit - <span class="text-amarelo">Academia</span></h5>
-            <hr>
-            <span class="site">www.smartfit.com.br</span>
-            <span class="tel">71 90993-4388</span>        
-        </div>
-        <div class="cham-loja">
-            <img [src]="'./assets/images/loja-logo.png'" alt=""/>
-            <h5>Smart Fit - <span class="text-amarelo">Academia</span></h5>
-            <hr>
-            <span class="site">www.smartfit.com.br</span>
-            <span class="tel">71 90993-4388</span>        
-        </div>
-        <div class="cham-loja">
-            <img [src]="'./assets/images/loja-logo.png'" alt=""/>
-            <h5>Smart Fit - <span class="text-amarelo">Academia</span></h5>
-            <hr>
-            <span class="site">www.smartfit.com.br</span>
-            <span class="tel">71 90993-4388</span>        
-        </div>
-        <div class="cham-loja">
-            <img [src]="'./assets/images/loja-logo.png'" alt=""/>
-            <h5>Smart Fit - <span class="text-amarelo">Academia</span></h5>
-            <hr>
-            <span class="site">www.smartfit.com.br</span>
-            <span class="tel">71 90993-4388</span>        
+            <span class="{{loja.tipo_rede_social}}">{{loja.rede_social}}</span>
+            <span class="tel">{{loja.telefone}}</span>        
         </div>
     </div>
 </section>
 <section class="section green">
     <h2>contato</h2>
     <div >
-        <form id="contact-form" class="cont_two_column" [formGroup]="formGroup" >
+        <form id="contact-form" class="cont_two_column" [formGroup]="formGroup" (ngSubmit)="sendMail()" >
           <div class="item">
-            <input type="text" id="nome" name="nome" required placeholder="Nome">
-            <input type="email" id="email" name="email" required placeholder="E-mail">
-            <input type="tel" id="telefone" name="telefone" placeholder="Telefone">
+            <input type="text" id="nome" formControlName="nome" required placeholder="Nome">
+            <input type="email" id="remetente" formControlName="remetente" required placeholder="E-mail">
+            <input type="tel" id="telefone" formControlName="telefone" required placeholder="Telefone">
             <!--input type="hidden" id="destinatario" name="destinatario" [value]="configData.email"-->
           </div>
           <div class="item">
-            <textarea id="mensagem" name="mensagem" required placeholder="Mensagem"></textarea>
-            <button type="submit">Enviar</button>
+            <textarea id="mensagem" formControlName="mensagem" required placeholder="Mensagem"></textarea>
+            <button type="submit" >Enviar</button>
           </div>
         </form>
     </div>
