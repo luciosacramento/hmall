@@ -17,7 +17,7 @@ export class HomeService {
     return this.server.get(environment.API_url,`lista/?busca=${value}`);
   }
 
-  public getConfig(value:string){
+  public getConfig(){
     return this.server.get(environment.API_url,`configuracoes-personalizadas`);
   }
 
