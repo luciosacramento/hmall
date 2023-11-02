@@ -66,7 +66,7 @@
     hr{
         border: 1px solid $cor-cinza-claro;
     }
-    .site,.tel{
+    .tel{
         font-size: 12px;
         display: table;
         margin: 10px auto 0 auto;
@@ -85,5 +85,9 @@
         &:before{
             background: url('/assets/images/icon-smartphone.png') no-repeat;
         }
+    }
+
+    a{
+        text-decoration: none;
     }
 }

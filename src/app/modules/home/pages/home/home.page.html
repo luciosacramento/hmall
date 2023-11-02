@@ -17,7 +17,7 @@
             <img [src]="loja.imagem_url" alt=""/>
             <h5>{{loja.titulo}} - <span class="text-amarelo">{{loja.area_atuacao}}</span></h5>
             <hr>
-            <span class="{{loja.tipo_rede_social}}">{{loja.rede_social}}</span>
+            <a href="{{loja.link_rede_social}}" target="_blank"><span class="link_{{loja.tipo_rede_social}}" > {{loja.rede_social}}</span></a>
             <span class="tel">{{loja.telefone}}</span>        
         </div>
     </div>
