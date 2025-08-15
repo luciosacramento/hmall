@@ -16,6 +16,8 @@ export class GlobalErrorHandler implements ErrorHandler {
 
     tratarErro(err:any): void {
 
+        console.log("erro:",err);
+
         //Extrai o "rejection" do erro, caso exista(ex.:)
         if (err.rejection) {
             err = err.rejection;
