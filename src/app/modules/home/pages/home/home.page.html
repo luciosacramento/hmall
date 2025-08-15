@@ -1,9 +1,9 @@
 <img [src]="'./assets/images/img-header.jpg'" alt="" srcset="" id="logo-header" class="w-100">
-<section class="section green" *ngIf="pageData">
+<section class="section green" *ngIf="pageData" id="hmall">
     <h2>{{pageData.titulo}}</h2>
     <p [innerHTML]="pageData.conteudo"></p>
 </section>
-<section class="section lojas">
+<section class="section lojas" id="lojas">
     <h2>Lojas e serviços</h2>
     <div class="text-center">
         <mat-form-field appearance="outline" class="m-auto">
@@ -22,7 +22,7 @@
         </div>
     </div>
 </section>
-<section class="section green">
+<section class="section green" id="contato">
     <h2>contato</h2>
     <div >
         <form id="contact-form" class="cont_two_column" [formGroup]="formGroup" (ngSubmit)="sendMail()" >

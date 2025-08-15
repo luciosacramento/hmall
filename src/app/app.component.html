@@ -6,11 +6,11 @@
      </button>
      <div id="menu-horizontal" class="m-auto">
        <!-- The following menu items will be hidden on both SM and XS screen sizes -->
-       <a href="#" mat-button>Menu Item 1</a>
-       <a href="#" mat-button>Menu Item 2</a>
+       <a href="#hmall" mat-button>H-mall</a>
+       <a href="#lojas" mat-button>Lojas e serviços</a>
        <img [src]="'./assets/images/logo-header.png'" alt="" srcset="" id="logo-header">
-       <a href="#" mat-button>Menu Item 3</a>
-       <a href="#" mat-button>Menu Item 4</a>
+       <a href="#contato" mat-button>contato</a>
+       <a href="#contact-info" mat-button>como chegar</a>
      </div>
      <div id="menu-only-logo" class="m-auto">
       <img [src]="'./assets/images/logo-header.png'" alt="" srcset="" id="logo-header">
@@ -22,10 +22,10 @@
    <mat-sidenav #sidenav>
      <mat-nav-list>
        <a (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
-       <a href="#" mat-list-item>Menu Item 1</a>
-       <a href="#" mat-list-item>Menu Item 2</a>
-       <a href="#" mat-list-item>Menu Item 3</a>
-       <a href="#" mat-list-item>Menu Item 4</a>
+       <a href="#hmall" mat-button>H-mall</a>
+       <a href="#lojas" mat-button>Lojas e serviços</a>
+       <a href="#contato" mat-button>contato</a>
+       <a href="#contact-info" mat-button>como chegar</a>
      </mat-nav-list>
    </mat-sidenav>
    <mat-sidenav-content><router-outlet></router-outlet></mat-sidenav-content>
