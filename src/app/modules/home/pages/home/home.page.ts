@@ -34,7 +34,7 @@ export class HomePage implements OnInit {
   }
 
   private getPage() {
-    const value = 88; // O valor que você deseja passar para o método getPage
+    const value = 8; // O valor que você deseja passar para o método getPage
     this.homeService.getPage(value).subscribe(
       {
         next:  (data:any) => {
